@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="40dp">
+
+  <LinearLayout
+    android:id="@+id/ll_loadmore_loading"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:gravity="center">
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="正在加载"/>
+  </LinearLayout>
+
+  <LinearLayout
+    android:id="@+id/ll_loadmore_fail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:visibility="gone">
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="加载失败"/>
+  </LinearLayout>
+
+  <LinearLayout
+    android:id="@+id/ll_loadmore_end"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:visibility="gone">
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="我也是有底线的"/>
+  </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,15 @@
+<resources>
+  <dimen name="text_margin">16dp</dimen>
+  <dimen name="font_size_100px">50dp</dimen>
+  <dimen name="font_size_70px">35dp</dimen>
+  <dimen name="font_size_60px">30dp</dimen>
+  <dimen name="font_size_50px">25dp</dimen>
+  <dimen name="font_size_34px">17dp</dimen>
+  <dimen name="font_size_28px">14dp</dimen>
+  <dimen name="font_size_26px">13dp</dimen>
+  <dimen name="font_size_24px">12dp</dimen>
+  <dimen name="font_size_22px">11dp</dimen>
+  <dimen name="font_size_20px">10dp</dimen>
+  <dimen name="nice_spinner_three_grid_unit">12dp</dimen>
+  <dimen name="nice_spinner_one_and_a_half_grid_unit">12dp</dimen>
+</resources>

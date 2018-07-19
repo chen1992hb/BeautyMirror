@@ -1,0 +1,19 @@
+apply plugin: 'java-library'
+
+dependencies {
+    def domainDependencies = rootProject.ext.domainDependencies
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation domainDependencies.rxJava
+    implementation domainDependencies.androidSupportAnnotation
+    implementation domainDependencies.javaxInject
+    implementation domainDependencies.gson
+    implementation rootProject.ext.developmentDependencies.leakCanary
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
+
+sourceCompatibility = "1.8"
+targetCompatibility = "1.8"

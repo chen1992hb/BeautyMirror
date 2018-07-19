@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary_light">#2EA7E0</color>
+    <color name="colorPrimaryPressed">#b1bede</color>
+    <color name="colorPrimaryUnable">#d0d0d0</color>
+    <color name="main_tab_selected">#313f62</color>
+    <color name="main_tab_normal">#888888</color>
+    <color name="app_color_theme_4">#9FD661</color>
+    <color name="trade_detail_green">#6FAD59</color>
+
+    <color name="ui_primary_dark_blue">#313F62</color>
+    <color name="ui_primary_white">#FFFFFF</color>
+    <color name="ui_primary_orange">#F39800</color>
+    <color name="ui_primary_blue">#3F5280</color>
+    <color name="ui_primary_light_blue">#627EC4</color>
+    <color name="font_dark_blue">#313F62</color>
+    <color name="font_dark_grey">#444444</color>
+    <color name="font_orange">#F39800</color>
+    <color name="font_grey">#888888</color>
+    <color name="font_failure">#B5C2DF</color>
+    <color name="btn_unable_grey">#888888</color>
+    <color name="trade_filter_bg">#e9ecf4</color>
+    <color name="btn_blue_green">#2E9AA6</color>
+    <color name="page_main_bg">#f5f7fc</color>
+    <color name="transparent">#00000000</color>
+    <color name="divider">#c4d0ee</color>
+    <color name="black">#000000</color>
+    <color name="btn_bg">#e9e9e9</color>
+
+    <color name="dialog_choose_type_chose">#F0F3F9</color>
+
+    <color name="topbar_light_blue">#0EB4FE</color>
+</resources>

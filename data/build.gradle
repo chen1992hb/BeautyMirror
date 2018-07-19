@@ -1,0 +1,58 @@
+apply plugin: 'com.android.library'
+apply plugin: 'realm-android'
+
+android {
+    def globalConfiguration = rootProject.extensions.getByName("ext")
+
+    compileSdkVersion globalConfiguration.getAt("androidCompileSdkVersion")
+
+    defaultConfig {
+        minSdkVersion globalConfiguration.getAt("androidMinSdkVersion")
+        targetSdkVersion globalConfiguration.getAt("androidTargetSdkVersion")
+        versionCode globalConfiguration.getAt("androidVersionCode")
+        versionName globalConfiguration.getAt("androidVersionName")
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        encoding "UTF-8"
+    }
+    buildToolsVersion '27.0.3'
+}
+
+dependencies {
+    def dataDependencies = rootProject.ext.dataDependencies
+    def testDependencies = rootProject.ext.dataTestDependencies
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:25.4.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+
+    implementation project(':domain')
+
+    implementation dataDependencies.rxJava
+    implementation dataDependencies.dagger
+    annotationProcessor dataDependencies.daggerCompiler
+    implementation dataDependencies.rxAndroid
+    implementation dataDependencies.xLog
+    api dataDependencies.retrofit
+    implementation dataDependencies.gsonConverter
+    implementation dataDependencies.rxJavaAdapter
+    api dataDependencies.gson
+    implementation dataDependencies.okHttp
+    implementation dataDependencies.androidAnnotations
+    implementation(dataDependencies.loggingInterceptor) {
+        exclude group: 'org.json', module: 'json'
+    }
+    implementation 'com.facebook.stetho:stetho-okhttp3:1.5.0'
+    implementation 'com.aliyun.ams:alicloud-android-httpdns:1.1.4'
+}
