@@ -7,11 +7,7 @@ import com.beadwallet.domain.entity.UserEntity;
 import javax.inject.Inject;
 
 
-/**
- * @author wanggeng
- * @desc 类描述
- * @date 创建时间：2017/11/20
- */
+
 
 public abstract class UserCache implements ICache<String> {
 

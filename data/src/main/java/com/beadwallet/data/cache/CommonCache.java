@@ -6,11 +6,6 @@ import com.beadwallet.data.util.SharedPreferenceUtil;
 import javax.inject.Inject;
 
 
-/**
- * @author wanggeng
- * @desc 类描述
- * @date 创建时间：2018/1/15
- */
 
 public abstract class CommonCache<T> implements ICache<T> {
 

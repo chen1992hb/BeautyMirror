@@ -32,4 +32,20 @@ public abstract class DefaultObserver<T> extends DisposableObserver<T> {
   public void onError(Throwable exception) {
     // no-op by default.
   }
+
+  @Override
+  public void onNext(T t) {
+    try {
+      safeNext(t);
+    }catch (Exception e){
+      e.printStackTrace();
+      nextError(e);
+    }
+  }
+
+  private void nextError(Exception e) {
+    onError(e);
+  }
+
+  protected abstract void safeNext(T t);
 }

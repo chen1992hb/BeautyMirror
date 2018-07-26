@@ -6,11 +6,7 @@ import javax.inject.Inject;
 import javax.inject.Singleton;
 
 
-/**
- * @author wanggeng
- * @desc 类描述
- * @date 创建时间：2017/11/14
- */
+
 
 @Singleton
 public class ObjectMapperUtil {

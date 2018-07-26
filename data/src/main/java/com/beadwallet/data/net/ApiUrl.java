@@ -1,12 +1,7 @@
 package com.beadwallet.data.net;
 
-/**
- * @author wanggeng
- * @desc 类描述
- * @date 创建时间：2017/11/8
- */
 
 public interface ApiUrl {
-  String API_BASE_URL = "";
-
+  String API_BASE_URL = "http://www.wudihaoker.com:8080/";
+  String API_DEMO_URL = "demo/home/post";
 }

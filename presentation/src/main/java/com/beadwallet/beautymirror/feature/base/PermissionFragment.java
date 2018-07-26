@@ -17,11 +17,7 @@ import permissions.dispatcher.OnShowRationale;
 import permissions.dispatcher.PermissionRequest;
 import permissions.dispatcher.RuntimePermissions;
 
-/**
- * @author wanggeng
- * @desc 类描述
- * @date 创建时间：2018/2/1
- */
+
 
 @RuntimePermissions
 public class PermissionFragment extends android.support.v4.app.Fragment {

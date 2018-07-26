@@ -4,12 +4,6 @@ import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.TreeMap;
 
-/**
- * @author wanggeng
- * @desc 类描述
- * @date 创建时间：2017/6/8
- */
-
 public class NetParamHelper {
 
   public static TreeMap transBean2Map(Object obj) {

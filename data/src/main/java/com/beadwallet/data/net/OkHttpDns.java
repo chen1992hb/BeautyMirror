@@ -71,7 +71,7 @@ public class OkHttpDns implements Dns {
     httpdns.setLogEnabled(BuildConfig.DEBUG);
     httpdns.setHTTPSRequestEnabled(true);
     // 设置预解析域名列表，真正使用时，建议您将预解析操作放在APP启动函数中执行。预解析操作为异步行为，不会阻塞您的启动流程
-    ArrayList<String> hostList = new ArrayList<>(Arrays.asList(ApiUrl.API_BASE_URL.replace("https://","")));
+    ArrayList<String> hostList = new ArrayList<>(Arrays.asList("api.lcsw.cn"));
     httpdns.setPreResolveHosts(hostList);
     // 允许返回过期的IP，通过设置允许返回过期的IP，配合异步查询接口，我们可以实现DNS懒更新策略
     httpdns.setExpiredIPEnabled(true);

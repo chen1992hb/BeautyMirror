@@ -10,11 +10,6 @@ import javax.inject.Inject;
 import javax.inject.Singleton;
 
 
-/**
- * @author wanggeng
- * @desc 类描述
- * @date 创建时间：2017/11/20
- */
 
 @Singleton
 public class UserCacheImp extends UserCache {

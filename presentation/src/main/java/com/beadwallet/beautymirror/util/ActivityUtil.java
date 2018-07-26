@@ -9,11 +9,6 @@ import com.beadwallet.beautymirror.feature.base.BaseActivity;
 import java.util.Stack;
 
 
-/**
- * @author wanggeng
- * @desc Activity管理工具
- * @date 创建时间：2017/2/16
- */
 public class ActivityUtil {
 
   // Activity栈

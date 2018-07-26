@@ -3,42 +3,73 @@ package com.beadwallet.data.bean.base;
 
 public class BaseResponse {
 
-  public static final String RETURN_CODE_OK = "01";
+  public static final String STATUS_OK = "200";
 
-  public String return_code;
-  public String result_code;
-  public String result_msg;
-  public String return_msg;
+  private  String appKey;
+  private String signature;
+  private String timestamp;
+  private  String sts;
+  private  String model;
+  private  String rmk;
+  private  String appVersion;
 
-  public String getReturn_code() {
-    return return_code;
+  public static String getStatusOk() {
+    return STATUS_OK;
   }
 
-  public void setReturn_code(String return_code) {
-    this.return_code = return_code;
+  public String getAppKey() {
+    return appKey;
   }
 
-  public String getResult_code() {
-    return result_code;
+  public void setAppKey(String appKey) {
+    this.appKey = appKey;
   }
 
-  public void setResult_code(String result_code) {
-    this.result_code = result_code;
+  public String getSignature() {
+    return signature;
   }
 
-  public String getResult_msg() {
-    return result_msg;
+  public void setSignature(String signature) {
+    this.signature = signature;
   }
 
-  public void setResult_msg(String result_msg) {
-    this.result_msg = result_msg;
+  public String getTimestamp() {
+    return timestamp;
   }
 
-  public String getReturn_msg() {
-    return return_msg;
+  public void setTimestamp(String timestamp) {
+    this.timestamp = timestamp;
   }
 
-  public void setReturn_msg(String return_msg) {
-    this.return_msg = return_msg;
+  public String getSts() {
+    return sts;
+  }
+
+  public void setSts(String sts) {
+    this.sts = sts;
+  }
+
+  public String getModel() {
+    return model;
+  }
+
+  public void setModel(String model) {
+    this.model = model;
+  }
+
+  public String getRmk() {
+    return rmk;
+  }
+
+  public void setRmk(String rmk) {
+    this.rmk = rmk;
+  }
+
+  public String getAppVersion() {
+    return appVersion;
+  }
+
+  public void setAppVersion(String appVersion) {
+    this.appVersion = appVersion;
   }
 }

@@ -24,17 +24,11 @@ import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
 
-/**
- * @author wanggeng
- * @desc 类描述
- * @date 创建时间：2017/11/7
- */
 
 public abstract class BaseFragment extends PermissionFragment {
 
 
-  @Inject
-  protected UserCache mUserCache;
+
 
   private static final String TAG         = "BaseFragment";
   private String mSimpleName = this.getClass().getSimpleName();
@@ -97,9 +91,7 @@ public abstract class BaseFragment extends PermissionFragment {
 
   protected void initializeUI(Bundle savedInstanceState){
     merchantUI(savedInstanceState);
-    if(mUserCache == null || mUserCache.getUserEntity() == null){
-      return;
-    }
+
 
   }
 

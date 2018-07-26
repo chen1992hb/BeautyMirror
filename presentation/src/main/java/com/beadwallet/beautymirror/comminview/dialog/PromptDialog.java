@@ -22,11 +22,6 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
-/**
- * @author wanggeng
- * @desc 类描述
- * @date 创建时间：2017/12/18
- */
 
 public class PromptDialog extends DialogFragment {
 

@@ -27,11 +27,6 @@ import retrofit2.Retrofit.Builder;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-/**
- * @author wanggeng
- * @desc 类描述
- * @date 创建时间：2017/11/9
- */
 
 @Singleton
 public class ApiConnection {
@@ -54,7 +49,7 @@ public class ApiConnection {
 
   public void buildRetrofit() {
     mRetrofit = new Builder()
-        .baseUrl(mBaseUrlCache.get())
+        .baseUrl(ApiUrl.API_BASE_URL)
         .client(getOkhttpClient())
         .addConverterFactory(GsonConverterFactory.create())
         .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
@@ -63,7 +58,7 @@ public class ApiConnection {
 
   private OkHttpClient getOkhttpClient() {
     OkHttpClient.Builder builder = new OkHttpClient.Builder();
-    builder.dns(OkHttpDns.getInstance(mContext));
+  //  builder.dns(OkHttpDns.getInstance(mContext));
     builder.connectTimeout(DEFAULT_CONNECTION_TIMEOUT, TimeUnit.SECONDS);
     builder.writeTimeout(DEFAULT_CONNECTION_TIMEOUT, TimeUnit.SECONDS);
     builder.addInterceptor(new HeaderInterceptor());
@@ -77,8 +72,8 @@ public class ApiConnection {
           .addHeader(VERSION, BuildConfig.VERSION_NAME)
           .build());
       builder.addNetworkInterceptor(new StethoInterceptor());
-      builder.sslSocketFactory(createSSLSocketFactory());
-      builder.hostnameVerifier(new TrustAllHostnameVerifier());
+     // builder.sslSocketFactory(createSSLSocketFactory());
+     // builder.hostnameVerifier(new TrustAllHostnameVerifier());
     }
     return builder.build();
   }

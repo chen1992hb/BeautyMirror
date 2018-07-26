@@ -30,11 +30,6 @@ import javax.inject.Inject;
 
 import butterknife.ButterKnife;
 
-/**
- * @author wanggeng
- * @desc 类描述
- * @date 创建时间：2017/11/7
- */
 
 public abstract class BaseActivity extends PermissionActivity {
 
@@ -222,7 +217,7 @@ public abstract class BaseActivity extends PermissionActivity {
 
 
   private void printLifeCycle(String methodName) {
-    XLog.tag(TAG).i(mSimpleName + "::" + methodName);
+  //  XLog.tag(TAG).i(mSimpleName + "::" + methodName);
   }
 
   protected void setupActivityComponent() {

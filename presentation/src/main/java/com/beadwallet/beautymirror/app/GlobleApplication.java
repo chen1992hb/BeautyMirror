@@ -6,7 +6,10 @@ import android.os.Bundle;
 import android.view.WindowManager;
 
 import com.beadwallet.beautymirror.di.component.ApplicationComponent;
+import com.beadwallet.beautymirror.di.component.DaggerApplicationComponent;
 import com.beadwallet.beautymirror.di.component.base.BaseComponent;
+import com.beadwallet.beautymirror.di.module.ApplicationModule;
+import com.beadwallet.beautymirror.di.module.base.BaseModule;
 import com.beadwallet.data.BuildConfig;
 import com.elvishew.xlog.LogConfiguration;
 import com.elvishew.xlog.LogLevel;
@@ -33,7 +36,13 @@ public class GlobleApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        initXLog();
+       // initXLog();
+        createComponent();
+    }
+
+    private void createComponent() {
+        mApplicationComponent = DaggerApplicationComponent.builder().applicationModule(new ApplicationModule(this)).build();;
+         mBaseComponent=mApplicationComponent.plus(new BaseModule());
     }
 
     private void initXLog() {

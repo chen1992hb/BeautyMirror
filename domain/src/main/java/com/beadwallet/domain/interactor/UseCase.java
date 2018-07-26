@@ -12,11 +12,6 @@ import io.reactivex.functions.Consumer;
 import io.reactivex.observers.DisposableObserver;
 import javax.inject.Inject;
 
-/**
- * @author wanggeng
- * @desc 类描述
- * @date 创建时间：2017/11/10
- */
 
 public abstract class UseCase<T, Params> {
 
